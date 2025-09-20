@@ -24,9 +24,13 @@ Things to reflect on:
   
 */
 
-let a = "Alice";
-let b = 5;
-let c = 20;
-let d = a + " bought " + b + " items for $" + c + ".";
+let customerAliceSmith = "Alice";
+let cartSumOfAllItemsInCart = 5;
+let totalAmountOfPurchaseBeforeTax = 20;
+let showCustomerTotalBeforeTax = customerAliceSmith + " bought " + cartSumOfAllItemsInCart + " items for $" + totalAmountOfPurchaseBeforeTax + ".";
 
-console.log(d);
+console.log(showCustomerTotalBeforeTax);
+
+const taxRate = 0.07;
+const totalAmountOfPurchaseAfterTax = totalAmountOfPurchaseBeforeTax * (1 + taxRate);
+console.log(customerAliceSmith + "'s total after tax is $" + totalAmountOfPurchaseAfterTax.toFixed(2) + ".");
